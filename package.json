@@ -1,0 +1,16 @@
+{
+  "name": "kasir-api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "supertest": "^6.1.6",
+    "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
+  }
+}
