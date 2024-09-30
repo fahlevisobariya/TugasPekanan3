@@ -1,15 +1,12 @@
-// test/auth.test.js
-const { expect } = require('chai');
-const { gettoken } = require('../authh.cjs'); // Pastikan jalur ini benar
+import supertest from "supertest";
+import { expect } from "chai";
+import { getAuthToken } from "../authh.js";
 
-describe('Auth Module', () => {
-  it('should return a valid token', async () => {
-    const token = await gettoken();
-    
-    // Assertion 1: Pastikan token tidak null atau undefined
-    expect(token).to.exist;
+const API_URL = "https://kasir-api.zelz.my.id/";
 
-    // Assertion 2: Pastikan token adalah string
-    expect(token).to.be.a('string');
+describe("Auth API Test", function () {
+  it("should get auth token", async function () {
+    const token = await getAuthToken();
+    expect(token).to.be.a("string");
   });
 });
